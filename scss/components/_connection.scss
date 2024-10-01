@@ -1,0 +1,27 @@
+.connection {
+  display: flex;
+  gap: 20px;
+}
+
+.hotline-icon,
+.mail-icon {
+  width: 20px;
+}
+
+.hotline,
+.mail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hotline a,
+.mail a {
+  color: var(--connection-color);
+  font-weight: 600;
+}
+
+.hotline-icon,
+.mail-icon {
+  filter: var(--color-color);
+}

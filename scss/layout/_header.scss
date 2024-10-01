@@ -1,0 +1,140 @@
+@use "../abstracts";
+#header {
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  //   animation: slideHeader 0.75s ease;
+}
+
+@keyframes slideHeader {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.top-bar {
+  background: var(--top-bar-bg);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+}
+
+.icon {
+  filter: var(--color-icon) !important;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  background: var(--main-header-bg);
+  height: 60px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+}
+
+.nav-bar {
+
+  @include abstracts.breakpoint(md) {
+    position: fixed;
+    inset: 0 60% 0 0;
+    z-index: 9;
+    background: orange;
+    padding: 20px 0;
+  }
+
+  &__list {
+    display: flex;
+    margin-left: 155px;
+
+    @include abstracts.breakpoint(xl) {
+      margin-left: 100px;
+    }
+
+    @include abstracts.breakpoint(md) {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-left: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    white-space: nowrap;
+
+    &:hover .dropdown {
+      display: block;
+    }
+
+    @include abstracts.breakpoint(md) {
+      width: 100%;
+    }
+  }
+
+
+  &__link {
+    padding: 19.5px;
+
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.4rem;
+
+    @include abstracts.breakpoint(lg) {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    @include abstracts.breakpoint(md) {
+      width: 100%;
+    }
+  }
+
+  
+  &__item:hover &__link {
+    color: #73c0fc;
+    transition: 0.2s;
+  }
+
+  &__back-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 20px;
+
+    @include abstracts.breakpoint(md) { 
+      display: block;
+    }
+  }
+
+  &__back-btn &__back-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__overlay {
+    visibility: hidden;
+    opacity: 0;
+
+    @include abstracts.breakpoint(md) {
+      visibility: visible;
+      opacity: 1;
+      position: fixed;
+      z-index: 8;
+      inset: 0;
+      background: rgba($color: #000000, $alpha: 0.4);
+    }
+  }
+}
