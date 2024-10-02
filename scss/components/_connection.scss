@@ -1,6 +1,12 @@
+@use "../abstracts";
+
 .connection {
   display: flex;
   gap: 20px;
+
+  @include abstracts.breakpoint(sm) {
+    flex-direction: column;
+  }
 }
 
 .hotline-icon,

@@ -1,0 +1,30 @@
+@use "../abstracts";
+
+.instruction {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        color: var(--text-color);
+        font-weight: 600;
+        font-size: 2rem;
+
+        @include abstracts.breakpoint(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__desc {
+        margin-top: 12px;
+        font-size: 1.8rem;
+        max-width: 250px;
+        line-height: 1.5;
+        color: var(--text-section);
+        font-style: italic;
+
+        @include abstracts.breakpoint(md) {
+            font-size: 1.3rem;
+        }
+    }
+}

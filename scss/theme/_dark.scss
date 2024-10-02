@@ -8,5 +8,21 @@ html.dark {
     saturate(7500%) hue-rotate(343deg) brightness(101%) contrast(101%);
 
   // Main Header
-  --main-header-bg: #777;
+  --main-header-bg: #2d2c2c;
+
+  // Nav bar
+  --nav-bar-mobile-bg: #292e39;
+
+  // Slideshow
+  --slideshow-bg: #353535;
+  
+  // Dropdown bg
+  --dropdown-bg: #292e39;
+
+  // Album box-shadow
+  --album-box-shadow: rgba(226, 219, 219, 0.24);
+
+  // Section
+  --section-bg: #232324;
+  --text-section: #dbcfcf;
 }

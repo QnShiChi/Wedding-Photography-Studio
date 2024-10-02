@@ -1,7 +1,7 @@
 <div class="header__wrap">
   <!-- Top bar -->
   <div class="top-bar">
-    <div class="container">
+    <div class="container max-width-100">
       <div class="top-bar__inner">
         <!-- Connection -->
         <div class="connection">
@@ -24,13 +24,11 @@
           </div>
         </div>
 
-
         <label  class="switch">
           <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
           <input id="switch-theme-btn" type="checkbox" class="input">
           <span class="slider"></span>
         </label>
-
       </div>
     </div>
   </div>
@@ -39,17 +37,31 @@
     <div class="container">
       <div class="main-header__inner">
         <!-- Logo -->
-        <img src="./assets/img/logo.jpg" alt="" class="logo" />
+        <a href="\">
+          <img src="./assets/img/logo.jpg" alt="" class="logo" />
+        </a>
+
+        <button class="nav-bar__menu js-toggle" toggle-target="#navbar">
+          <img class="nav-bar__menu-icon icon" src="../assets/icons/menu-icon.svg" alt="">
+        </button>
         <!-- Nav bar -->
-        <nav class="nav-bar">
+        <nav id="navbar" class="nav-bar hide">
           <!-- Back btn -->
-          <button class="nav-bar__back-btn">
+          <button class="nav-bar__back-btn js-toggle" toggle-target="#navbar">
             <img class="nav-bar__back-icon icon" src="../assets/icons/back-icon.svg" alt="">
           </button>
           <!-- Nav bar list -->
-          <ul class="nav-bar__list">
+          <ul class="nav-bar__list js-dropdown-list">
             <li class="nav-bar__item">
-              <a href="#!" class="nav-bar__link">ALBUM</a>
+              <a href="#!" class="nav-bar__link">Trang chủ</a>
+            </li>
+
+            <li class="nav-bar__item">
+              <a href="#!" class="nav-bar__link">Giới thiệu</a>
+            </li>
+
+            <li class="nav-bar__item">
+              <a href="#!" class="nav-bar__link">Album</a>
               <!-- Dropdown -->
               <div class="dropdown">
                 <div class="dropdown__inner">
@@ -150,7 +162,7 @@
             </li>
 
             <li class="nav-bar__item">
-              <a href="#!" class="nav-bar__link">VIDEO</a>
+              <a href="#!" class="nav-bar__link">Video</a>
               <!-- Dropdown -->
               <div class="dropdown">
                 <div class="dropdown__inner">
@@ -251,109 +263,7 @@
             </li>
 
             <li class="nav-bar__item">
-              <a href="#!" class="nav-bar__link">BẢNG GIÁ</a>
-
-              <!-- Dropdown -->
-              <div class="dropdown">
-                <div class="dropdown__inner">
-                  <!-- Dropdown column -->
-                  <div class="dropdown__column">
-                    <h2 class="dropdown__heading">Indoor Studio</h2>
-                    <!-- Dropdown list -->
-                    <ul class="dropdown__list">
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Signature Concept</a>
-                      </li>
-
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Sample Concept</a>
-                      </li>
-
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Collection</a>
-                      </li>
-
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Beauty</a>
-                      </li>
-
-                    </ul>
-                  </div>
-                  <!-- Dropdown column -->
-                  <div class="dropdown__column">
-                    <h2 class="dropdown__heading">Indoor Studio</h2>
-                    <!-- Dropdown list -->
-                    <ul class="dropdown__list">
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Signature Concept</a>
-                      </li>
-
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Sample Concept</a>
-                      </li>
-
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Collection</a>
-                      </li>
-
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Beauty</a>
-                      </li>
-
-                    </ul>
-                  </div>
-                  <!-- Dropdown column -->
-                  <div class="dropdown__column">
-                    <h2 class="dropdown__heading">Indoor Studio</h2>
-                    <!-- Dropdown list -->
-                    <ul class="dropdown__list">
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Signature Concept</a>
-                      </li>
-
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Sample Concept</a>
-                      </li>
-
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Collection</a>
-                      </li>
-
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Beauty</a>
-                      </li>
-
-                    </ul>
-                  </div>
-                  <!-- Dropdown column -->
-                  <div class="dropdown__column">
-                    <h2 class="dropdown__heading">Indoor Studio</h2>
-                    <!-- Dropdown list -->
-                    <ul class="dropdown__list">
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Signature Concept</a>
-                      </li>
-
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Sample Concept</a>
-                      </li>
-
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Collection</a>
-                      </li>
-
-                      <li class="dropdown__item">
-                        <a class="dropdown__link" href="#!">Beauty</a>
-                      </li>
-
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-bar__item">
-              <a href="#!" class="nav-bar__link">TRANG PHỤC CƯỚI</a>
+              <a href="#!" class="nav-bar__link">Bảng Giá</a>
 
               <!-- Dropdown -->
               <div class="dropdown">
@@ -455,7 +365,109 @@
             </li>
 
             <li class="nav-bar__item">
-              <a href="#!" class="nav-bar__link">TRANG ĐIỂM</a>
+              <a href="#!" class="nav-bar__link">Trang Phục Cưới</a>
+
+              <!-- Dropdown -->
+              <div class="dropdown">
+                <div class="dropdown__inner">
+                  <!-- Dropdown column -->
+                  <div class="dropdown__column">
+                    <h2 class="dropdown__heading">Indoor Studio</h2>
+                    <!-- Dropdown list -->
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Signature Concept</a>
+                      </li>
+
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Sample Concept</a>
+                      </li>
+
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Collection</a>
+                      </li>
+
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Beauty</a>
+                      </li>
+
+                    </ul>
+                  </div>
+                  <!-- Dropdown column -->
+                  <div class="dropdown__column">
+                    <h2 class="dropdown__heading">Indoor Studio</h2>
+                    <!-- Dropdown list -->
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Signature Concept</a>
+                      </li>
+
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Sample Concept</a>
+                      </li>
+
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Collection</a>
+                      </li>
+
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Beauty</a>
+                      </li>
+
+                    </ul>
+                  </div>
+                  <!-- Dropdown column -->
+                  <div class="dropdown__column">
+                    <h2 class="dropdown__heading">Indoor Studio</h2>
+                    <!-- Dropdown list -->
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Signature Concept</a>
+                      </li>
+
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Sample Concept</a>
+                      </li>
+
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Collection</a>
+                      </li>
+
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Beauty</a>
+                      </li>
+
+                    </ul>
+                  </div>
+                  <!-- Dropdown column -->
+                  <div class="dropdown__column">
+                    <h2 class="dropdown__heading">Indoor Studio</h2>
+                    <!-- Dropdown list -->
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Signature Concept</a>
+                      </li>
+
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Sample Concept</a>
+                      </li>
+
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Collection</a>
+                      </li>
+
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#!">Beauty</a>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-bar__item">
+              <a href="#!" class="nav-bar__link">Trang Điểm</a>
 
               <!-- Dropdown -->
               <div class="dropdown">
@@ -558,7 +570,7 @@
           </ul>
         </nav>
         <!-- Navbar overlay -->
-        <div class="nav-bar__overlay"></div>
+        <div class="nav-bar__overlay js-toggle" toggle-target="#navbar"></div>
       </div>
     </div>
   </div>

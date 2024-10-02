@@ -4,6 +4,7 @@
   left: 0;
   right: 0;
   top: 0;
+  z-index: 999;
   //   animation: slideHeader 0.75s ease;
 }
 
@@ -25,6 +26,7 @@
     justify-content: space-between;
     padding: 10px;
   }
+  
 }
 
 .icon {
@@ -41,6 +43,12 @@
     display: flex;
     align-items: center;
     padding-bottom: 5px;
+
+    @include abstracts.breakpoint(md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -48,10 +56,38 @@
 
   @include abstracts.breakpoint(md) {
     position: fixed;
-    inset: 0 60% 0 0;
+    inset: 0 50% 0 0;
     z-index: 9;
-    background: orange;
     padding: 20px 0;
+    background: var(--nav-bar-mobile-bg);
+
+    transform: translate(-100%);
+    transition: 0.5s;
+
+    &.show {
+      transform: translateX(0);
+    }
+
+    &.show ~ &__overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__menu {
+    display: none;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    @include abstracts.breakpoint(md) {
+      display: block;
+    }
+  }
+
+  &__menu &__menu-icon {
+    width: 30px;
+    height: 30px;
   }
 
   &__list {
@@ -65,9 +101,12 @@
     @include abstracts.breakpoint(md) {
       display: flex;
       flex-direction: column;
-      gap: 30px;
       margin-left: 0;
+      
+      overflow-y: auto;
+      height: calc(100% - 30px);
     }
+
   }
 
   &__item {
@@ -80,6 +119,14 @@
 
     @include abstracts.breakpoint(md) {
       width: 100%;
+
+      &:hover .dropdown {
+        display: none;
+      }
+
+      &--active .dropdown {
+        display: block !important;
+      }
     }
   }
 
@@ -89,7 +136,7 @@
 
     color: var(--text-color);
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 
     @include abstracts.breakpoint(lg) {
       font-weight: 600;
@@ -97,7 +144,10 @@
     }
 
     @include abstracts.breakpoint(md) {
+      display: block;
       width: 100%;
+      font-size: 1.4rem;
+      font-weight: 700;
     }
   }
 
@@ -129,12 +179,11 @@
     opacity: 0;
 
     @include abstracts.breakpoint(md) {
-      visibility: visible;
-      opacity: 1;
       position: fixed;
       z-index: 8;
       inset: 0;
       background: rgba($color: #000000, $alpha: 0.4);
+      transition: 0.25s;
     }
   }
 }

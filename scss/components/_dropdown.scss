@@ -12,6 +12,8 @@
 
     @include abstracts.breakpoint(md) {
         left: 0;
+        position: initial;
+        padding-top: 0;
     }
 
 
@@ -20,12 +22,12 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 60px;
         padding: 20px;
-        background: #fff;
-        min-height: 100px;
         max-height: 450px;
         overflow-y: auto;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         border-radius: 5px;
+        background: var(--dropdown-bg);
+
 
         @include abstracts.breakpoint(xl) {
             grid-template-columns: repeat(2, 1fr);
@@ -37,15 +39,22 @@
 
         @include abstracts.breakpoint(md) {
             border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            height: 100%;
+            padding: 0 20px;
         }
     }
 
-    
 
     &__heading {
         color: var(--text-color);
         font-weight: 700;
         font-size: 1.8rem;
+
+        @include abstracts.breakpoint(md) {
+            font-size: 1.6rem;
+        }
     }
 
     &__list {
@@ -59,9 +68,13 @@
         color: var(--text-color);
         padding: 10px 10px 10px 0;
         transition: 0.2s;
+
+        @include abstracts.breakpoint(md) {
+            font-size: 1.4rem;
+        }
     }
 
     &__item:hover &__link {
         color: #73c0fc;
     }
-}
+} 
