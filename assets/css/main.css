@@ -1418,11 +1418,16 @@ html {
 }
 .nav-bar__list {
   display: flex;
-  margin-left: 155px;
+  margin-left: 120px;
 }
 @media (max-width: 1199.98px) {
   .nav-bar__list {
     margin-left: 100px;
+  }
+}
+@media (max-width: 991.98px) {
+  .nav-bar__list {
+    margin-left: 110px;
   }
 }
 @media (max-width: 767.98px) {
@@ -1462,6 +1467,7 @@ html {
   .nav-bar__link {
     font-weight: 600;
     font-size: 1.2rem;
+    padding: 14px;
   }
 }
 @media (max-width: 767.98px) {

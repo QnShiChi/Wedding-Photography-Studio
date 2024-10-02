@@ -92,10 +92,14 @@
 
   &__list {
     display: flex;
-    margin-left: 155px;
+    margin-left: 120px;
 
     @include abstracts.breakpoint(xl) {
       margin-left: 100px;
+    }
+
+    @include abstracts.breakpoint(lg) {
+      margin-left: 110px;
     }
 
     @include abstracts.breakpoint(md) {
@@ -141,6 +145,7 @@
     @include abstracts.breakpoint(lg) {
       font-weight: 600;
       font-size: 1.2rem;
+      padding: 14px;
     }
 
     @include abstracts.breakpoint(md) {
