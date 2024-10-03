@@ -1,0 +1,142 @@
+@use "../abstracts";
+.footer {
+    background: var(--footer-bg);
+    padding: 50px;
+
+    @include abstracts.breakpoint(md) {
+        padding: 30px;
+    }
+
+    &__row {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include abstracts.breakpoint(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include abstracts.breakpoint(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include abstracts.breakpoint(sm) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        box-shadow: var(--logo-box-shadow);
+
+        @include abstracts.breakpoint(sm) {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__heading {
+        color: var(--text-color);
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    &__item {
+        width: 200px;
+    }
+
+    &__link {
+        display: inline-block;
+        color: var(--text-color);
+        width: 100%;
+        padding: 10px 10px 10px 0;
+        line-height: 1.5;
+        font-style: italic;
+    }
+
+    &__bottom {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 50px;
+
+        @include abstracts.breakpoint(sm) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    
+        &-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 6px;
+          filter: grayscale(50%);
+          transition: filter, translate;
+          transition-duration: 0.3s;
+    
+          @include abstracts.breakpoint(sm) {
+            width: 42px;
+            height: 42px;
+          }
+    
+          &--facebook {
+            background: #4863a9;
+          }
+    
+          &--phone {
+            background: rgb(26, 207, 41);
+          }
+    
+          &--tiktok {
+            background: #000;
+          }
+    
+          &:hover {
+            filter: grayscale(0);
+            translate: 0 -10px;
+          }
+        }
+    
+        &-icon {
+          filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(2%) hue-rotate(72deg) brightness(109%)
+            contrast(100%); 
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    &__text {
+        white-space: nowrap;
+        color: var(--text-color);
+        font-size: 1.8rem;
+        font-weight: 600;
+
+        @include abstracts.breakpoint(sm) {
+            font-size: 1.4rem;
+        }
+    }
+}
+  
+
+  
+  

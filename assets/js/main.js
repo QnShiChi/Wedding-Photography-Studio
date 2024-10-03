@@ -4,7 +4,6 @@ document.onscroll = () => {
   const header = document.querySelector("#header");
 
   if (scrollTop >= 45) {
-    console.log(scrollTop);
     header.style.animationName = "slideHeader";
     header.style.animationDuration = "0.75s";
     header.style.animationTimingFunction = "ease";
@@ -101,5 +100,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   window.addEventListener("resize", updateSlideWidth);
-  updateSlideWidth(); // Ensure proper scaling on load
+  updateSlideWidth();
 });
