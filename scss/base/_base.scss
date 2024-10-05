@@ -21,6 +21,12 @@ a {
   text-decoration: none;
 }
 
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
 .flex-center {
   display: flex;
   align-items: center;  

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Real Love - Detail</title>
-
+    <title>Quản lý Album - Admin</title>
     <!-- Favicon -->
     <link
       rel="apple-touch-icon"
@@ -33,10 +32,11 @@
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Embed Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
 
@@ -46,38 +46,31 @@
     <!-- Script -->
     <script src="./assets/js/script.js"></script>
   </head>
-  <body>
-    <header id="header"></header>
-    <script>
-      load("#header", "./template/header.html");
-    </script>
-
-    <main>
-      <section class="section">
-        <div class="container">
-          <h2 id="album-title"></h2>
-          <div id="album-content" class="album-detail">
-            <!-- Hình ảnh của album sẽ hiển thị ở đây -->
-          </div>
-        </div>
-
-        <div class="detail-modal">
-          <div class="detail-modal-content">
-              <span class="close">&times;</span>
-              <img id="modal-detail" src="" alt="">
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer" id="footer"></footer>
-    <script>
-      load("#footer", "./template/footer.html");
-    </script>
-    <script src="./assets/js/main.js"></script>
+  <body class="page">
+    <div class="page__container-wrap">
+      <h1 class="page__title">Quản lý Album</h1>
     
-    <script>
-      load("#footer", "./template/footer.html");
-    </script>
-    <script src="./assets/js/detail-album.js"></script>
+      <!-- Chọn album để upload -->
+      <div class="form-group">
+        <label class="form-group__label" for="albumSelect">Chọn Album:</label>
+        <select class="form-group__select" id="albumSelect">
+          <option value="album1">Album 1</option>
+          <option value="album2">Album 2</option>
+          <option value="album3">Album 3</option>
+          <option value="album4">Album 4</option>
+        </select>
+      </div>
+
+      <!-- Khu vực để upload hình -->
+      <div class="form-group">
+        <input class="form-group__file" type="file" id="imageUpload" accept="image/*" multiple />
+        <button class="form-group__button" onclick="uploadImages()">Upload Hình Ảnh</button>
+      </div>
+
+      <!-- Khu vực hiển thị hình ảnh -->
+      <div class="album" id="album"></div>
+    </div>
+
+    <script src="./assets/js/admin.js"></script>
   </body>
 </html>

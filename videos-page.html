@@ -6,40 +6,18 @@
     <title>Real Love - Video</title>
 
     <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="./assets/favicon/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Embed Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/main.css" />
@@ -58,48 +36,50 @@
       <section class="section">
         <div class="container max-width-100">
           <div class="section__top">
-            <h2 class="section__heading">
-              Xem video cưới cùng Real Love nào!
-            </h2>
+            <h2 class="section__heading">Xem video cưới cùng Real Love nào!</h2>
           </div>
           <!-- Video gallery -->
           <div class="video-gallery">
             <div class="video-block">
-                <video src="./assets/video/video-demo.mp4" controls></video>
+              <video src="./assets/video/video-demo.mp4" controls></video>
             </div>
             <div class="video-block">
-                <video src="./assets/video/video-demo.mp4" controls></video>
+              <video src="./assets/video/video-demo.mp4" controls></video>
             </div>
             <div class="video-block">
-                <video src="./assets/video/video-demo.mp4" controls></video>
+              <video src="./assets/video/video-demo.mp4" controls></video>
             </div>
             <div class="video-block">
-                <video src="./assets/video/video-demo.mp4" controls></video>
+              <video src="./assets/video/video-demo.mp4" controls></video>
             </div>
 
             <div class="video-block">
               <video src="./assets/video/video-demo.mp4" controls></video>
             </div>
             <div class="video-block">
-                <video src="./assets/video/video-demo.mp4" controls></video>
+              <video src="./assets/video/video-demo.mp4" controls></video>
             </div>
             <div class="video-block">
-                <video src="./assets/video/video-demo.mp4" controls></video>
+              <video src="./assets/video/video-demo.mp4" controls></video>
             </div>
             <div class="video-block">
-                <video src="./assets/video/video-demo.mp4" controls></video>
+              <video src="./assets/video/video-demo.mp4" controls></video>
             </div>
           </div>
-    
+
           <div class="video-modal">
             <div class="video-modal-content">
-                <span class="close-modal">&times;</span>
-                <video id="modal-video" controls></video>
+              <span class="close-modal">&times;</span>
+              <video id="modal-video" controls></video>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- Nhúng iframe âm thanh -->
+    <iframe src="./play-music-btn.html" style="display:none;"></iframe>
+
     <footer class="footer" id="footer"></footer>
     <script>
       load("#footer", "./template/footer.html");
