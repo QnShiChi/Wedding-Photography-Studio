@@ -1,0 +1,12 @@
+.map {
+    background: var(--map-bg);
+    padding-top: 30px;
+
+    &__iframe-wrap {
+        margin-top: 30px;
+    }
+    &__iframe {
+        width: 100%;
+        height: 450px;
+    }
+}

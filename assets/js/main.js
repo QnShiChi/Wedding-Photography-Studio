@@ -102,3 +102,71 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", updateSlideWidth);
   updateSlideWidth();
 });
+
+// Play video
+document.addEventListener('DOMContentLoaded', function () {
+  const videoBlocks = document.querySelectorAll('.video-block');
+  const modal = document.querySelector('.video-modal');
+  const modalVideo = document.querySelector('#modal-video');
+  const closeBtn = document.querySelector('.close-modal');
+
+  videoBlocks.forEach(block => {
+      block.addEventListener('click', function () {
+          const videoItem = block.querySelector("video");
+          const videoSrc = videoItem.src;
+          modalVideo.src = videoSrc;
+          modal.style.display = 'flex';
+          
+          modalVideo.addEventListener('loadeddata', function () {
+              modalVideo.play();
+          }, { once: true });  
+      });
+  });
+
+  window.addEventListener('click', function (e) {
+      if (e.target === modal || e.target === closeBtn) {
+          modal.style.display = 'none';
+          modalVideo.pause();  
+          modalVideo.src = '';  
+      }
+  });
+});
+
+// Fix navbar last item
+const navbarItems = document.querySelectorAll(".nav-bar__item");
+const navbarItemsLength = navbarItems.length;
+let viewportWidth = window.innerWidth;
+
+if (navbarItemsLength > 0) {
+  const lastNavbarItem = navbarItems[navbarItemsLength - 1];
+
+  lastNavbarItem.addEventListener("mouseover", () => {
+    const dropdown = lastNavbarItem.querySelector(".dropdown");
+
+    if (dropdown) {
+      if (viewportWidth >= 992) {
+        dropdown.style.left = "-275px";
+      }
+      else {
+        dropdown.style.left = "-30px";
+      }
+    }
+  });
+}
+
+window.addEventListener("resize", () => {
+  viewportWidth = window.innerWidth;
+});
+
+// Load connects buttons
+fetch('contact-buttons.html')
+.then(response => response.text())
+.then(data => {
+  document.body.insertAdjacentHTML('beforeend', data);
+});
+
+
+
+
+
+

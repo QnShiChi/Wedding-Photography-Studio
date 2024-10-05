@@ -77,8 +77,9 @@
     &__social {
         display: flex;
         align-items: center;
+        right: 0;
         gap: 20px;
-    
+        
         &-link {
           display: flex;
           align-items: center;
