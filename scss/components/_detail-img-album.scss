@@ -32,8 +32,12 @@
 
 .detail-modal-content {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 80%;
-  max-width: 700px;
+  top: 10%;
+  left: 20%;
+  max-width: 60%;
   background: #eedede65;
 }
 
@@ -41,7 +45,6 @@
     max-width: 100%;
     max-height: 80vh;
     width: auto;
-    border-radius: 8px;
   }
 
 .close {

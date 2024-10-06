@@ -2488,8 +2488,12 @@ html {
 
 .detail-modal-content {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 80%;
-  max-width: 700px;
+  top: 10%;
+  left: 20%;
+  max-width: 60%;
   background: rgba(238, 222, 222, 0.3960784314);
 }
 
@@ -2497,7 +2501,6 @@ html {
   max-width: 100%;
   max-height: 80vh;
   width: auto;
-  border-radius: 8px;
 }
 
 .close {
@@ -2651,12 +2654,6 @@ html {
 }
 
 /* Album styles */
-.album {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
 .album__box {
   width: 200px;
   background-color: #fff;
@@ -2696,12 +2693,6 @@ html {
 
 .album__delete-btn:hover {
   background-color: #ff1a1a;
-}
-
-.album {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 .album-edit-box {

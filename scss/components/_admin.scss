@@ -64,11 +64,6 @@
   }
   
   /* Album styles */
-  .album {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
   
   .album__box {
     width: 200px;
@@ -110,12 +105,7 @@
   .album__delete-btn:hover {
     background-color: #ff1a1a;
   }
-
-  .album {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
+  
   .album-edit-box {
     width: 200px;
     background-color: #fff;
