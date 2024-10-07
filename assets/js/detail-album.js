@@ -86,7 +86,6 @@ function setupZoomFeature() {
   });
 }
 
-
 // Khi tải trang, lấy tên album từ URL và hiển thị ảnh từ IndexedDB
 window.onload = function() {
   const albumName = getQueryParam('album');
@@ -96,3 +95,28 @@ window.onload = function() {
       console.error("Không tìm thấy tên album trong URL");
   }
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+  const loader = document.getElementById('loader');
+  const albumContent = document.getElementById('album-content');
+
+  // Hiện loader khi đang tải hình ảnh
+  loader.style.display = 'block';
+
+  // Giả lập tải dữ liệu
+  setTimeout(() => {
+    // Giả sử bạn đã thêm hình ảnh vào album-content
+    const images = ['image1.jpg', 'image2.jpg', 'image3.jpg']; // Thay thế với hình ảnh thật
+
+    images.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = 'Album Image';
+      img.onload = function() {
+        loader.style.display = 'none'; // Ẩn loader khi hình ảnh đã tải xong
+        albumContent.appendChild(img);
+      };
+    });
+  }, 2000); // Giả lập thời gian tải 2 giây
+});
+
