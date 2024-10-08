@@ -58,6 +58,10 @@
           <option value="album2">Album 2</option>
           <option value="album3">Album 3</option>
           <option value="album4">Album 4</option>
+          <option value="album5">Album 5</option>
+          <option value="album6">Album 6</option>
+          <option value="album7">Album 7</option>
+          <option value="album8">Album 8</option>
         </select>
       </div>
 
@@ -68,9 +72,130 @@
       </div>
 
       <!-- Khu vực hiển thị hình ảnh -->
-      <div class="album" id="album"></div>
-    </div>
+      <div class="album album-row" id="album"></div>
 
+      <!-- Mỗi album sẽ có phần chỉnh sửa ảnh đại diện riêng -->
+      <div class="admin-albums">
+        <h2 class="admin-albums__title">Chỉnh sửa ảnh đại diện Album</h2>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-3">
+          <div class="col">
+            <!-- Album 1 -->
+            <div class="album-block">
+              <h3>Album 1</h3>
+              <img id="coverImageDisplayalbum1" src="" alt="Album 1" />
+              <input type="file" id="coverImageUploadalbum1" accept="image/*" />
+              <button onclick="updateCoverImage('album1')">Cập nhật</button>
+            </div>
+          </div>
+  
+          <div class="col">
+              <!-- Album 2 -->
+            <div class="album-block">
+              <h3>Album 2</h3>
+              <img id="coverImageDisplayalbum2" src="" alt="Album 2" />
+              <input type="file" id="coverImageUploadalbum2" accept="image/*" />
+              <button onclick="updateCoverImage('album2')">Cập nhật</button>
+            </div>
+          </div>
+  
+          <div class="col">
+              <!-- Album 3 -->
+            <div class="album-block">
+              <h3>Album 3</h3>
+              <img id="coverImageDisplayalbum3" src="" alt="Album 3" />
+              <input type="file" id="coverImageUploadalbum3" accept="image/*" />
+              <button onclick="updateCoverImage('album3')">Cập nhật</button>
+            </div>
+          </div>
+  
+          <div class="col">
+              <!-- Album 4 -->
+            <div class="album-block">
+              <h3>Album 4</h3>
+              <img id="coverImageDisplayalbum4" src="" alt="Album 4" />
+              <input type="file" id="coverImageUploadalbum4" accept="image/*" />
+              <button onclick="updateCoverImage('album4')">Cập nhật</button>
+            </div>
+          </div>
+
+          <div class="col">
+            <!-- Album 5 -->
+            <div class="album-block">
+              <h3>Album 5</h3>
+              <img id="coverImageDisplayalbum5" src="" alt="Album 5" />
+              <input type="file" id="coverImageUploadalbum5" accept="image/*" />
+              <button onclick="updateCoverImage('album5')">Cập nhật</button>
+            </div>
+          </div>
+
+          <div class="col">
+            <!-- Album 6 -->
+            <div class="album-block">
+              <h3>Album 6</h3>
+              <img id="coverImageDisplayalbum6" src="" alt="Album 6" />
+              <input type="file" id="coverImageUploadalbum6" accept="image/*" />
+              <button onclick="updateCoverImage('album6')">Cập nhật</button>
+            </div>
+          </div>
+
+          <div class="col">
+            <!-- Album 7 -->
+            <div class="album-block">
+              <h3>Album 7</h3>
+              <img id="coverImageDisplayalbum7" src="" alt="Album 7" />
+              <input type="file" id="coverImageUploadalbum7" accept="image/*" />
+              <button onclick="updateCoverImage('album7')">Cập nhật</button>
+            </div>
+          </div>
+
+          <div class="col">
+            <!-- Album 8 -->
+            <div class="album-block">
+              <h3>Album 8</h3>
+              <img id="coverImageDisplayalbum8" src="" alt="Album 8" />
+              <input type="file" id="coverImageUploadalbum8" accept="image/*" />
+              <button onclick="updateCoverImage('album8')">Cập nhật</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phần chỉnh sửa ảnh đại diện services -->
+       <div class="admin-services">
+        <h2 class="admin-albums__title">Chỉnh sửa ảnh đại diện phần services</h2>
+        <div class="row row-cols-md-2 row-cols-sm-1 g-3">
+          <div class="col">
+            <!-- Album 1 -->
+            <div class="album-block">
+              <h3>Album ảnh cưới</h3>
+              <img id="coverImageDisplayalbum9" src="" alt="Album 9" />
+              <input type="file" id="coverImageUploadalbum9" accept="image/*" />
+              <button onclick="updateCoverImage('album9')">Cập nhật</button>
+            </div>
+          </div>
+  
+          <div class="col">
+              <!-- Album 2 -->
+            <div class="album-block">
+              <h3>Trang điểm cô dâu</h3>
+              <img id="coverImageDisplayalbum10" src="" alt="Album 10" />
+              <input type="file" id="coverImageUploadalbum10" accept="image/*" />
+              <button onclick="updateCoverImage('album10')">Cập nhật</button>
+            </div>
+          </div>
+  
+          <div class="col">
+              <!-- Album 3 -->
+            <div class="album-block">
+              <h3>Váy cưới cao cấp</h3>
+              <img id="coverImageDisplayalbum11" src="" alt="Album 11" />
+              <input type="file" id="coverImageUploadalbum11" accept="image/*" />
+              <button onclick="updateCoverImage('album11')">Cập nhật</button>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
     <script src="./assets/js/admin.js"></script>
   </body>
 </html>

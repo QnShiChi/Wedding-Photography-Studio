@@ -105,6 +105,11 @@
   .album__delete-btn:hover {
     background-color: #ff1a1a;
   }
+
+  .album-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
   
   .album-edit-box {
     width: 200px;
@@ -142,4 +147,40 @@
   .delete-btn:hover {
     background-color: #ff1a1a;
   }
+
+
+  .admin-albums {
+    &__title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+  }
+
+  .admin-albums img, .admin-services img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .admin-albums h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .admin-albums button,.admin-services button {
+    padding: 10px;
+    width: 100px;
+    height: 30px;
+    background: #191919e0;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .admin-services {
+    margin-top: 50px;
+  }
+
+
   

@@ -1,0 +1,12 @@
+.view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6px 30px 0 auto;
+}
+
+.view-text {
+    color: var(--text-color);
+    margin-left: 6px;
+    font-weight: 600;
+}

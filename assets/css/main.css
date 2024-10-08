@@ -1332,6 +1332,26 @@ button {
     display: none !important;
   }
 }
+html {
+  --text-color: #1a162e;
+  --connection-color: #1a162e;
+  --top-bar-bg: #eeeeee;
+  --color-icon: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%)
+    hue-rotate(21deg) brightness(95%) contrast(100%);
+  --main-header-bg: #ffffff7e;
+  --nav-bar-mobile-bg: #fff;
+  --slideshow-bg: #fff;
+  --dropdown-bg: #fff;
+  --social-connect-bg: #fff;
+  --album-box-shadow: rgba(0, 0, 0, 0.24);
+  --section-bg: #f7f7ff;
+  --text-section: #716d6d;
+  --footer-bg: #eee;
+  --logo-box-shadow: rgba(5, 178, 89, 0.489) -5px 5px, rgba(5, 178, 89, 0.3) -10px 10px, rgba(5, 178, 89, 0.2) -15px 15px, rgba(5, 178, 89, 0.1) -20px 20px, rgba(5, 178, 89, 0.05) -25px 25px;
+  --video-block-bg: #eee;
+  --map-bg: #f7f7f7 ;
+}
+
 html.dark {
   --text-color: #fff;
   --connection-color: #fff;
@@ -1349,26 +1369,7 @@ html.dark {
   --logo-box-shadow: rgba(46, 217, 240, 0.4) -5px 5px, rgba(46, 217, 240, 0.3) -10px 10px, rgba(46, 217, 240, 0.2) -15px 15px, rgba(46, 217, 240, 0.1) -20px 20px, rgba(46, 217, 240, 0.05) -25px 25px;
   --video-block-bg: #262d3c;
   --map-bg: #262d3c;
-}
-
-html {
-  --text-color: #1a162e;
-  --connection-color: #1a162e;
-  --top-bar-bg: #eeeeee;
-  --color-icon: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%)
-    hue-rotate(21deg) brightness(95%) contrast(100%);
-  --main-header-bg: #fff;
-  --nav-bar-mobile-bg: #fff;
-  --slideshow-bg: #fff;
-  --dropdown-bg: #fff;
-  --social-connect-bg: #fff;
-  --album-box-shadow: rgba(0, 0, 0, 0.24);
-  --section-bg: #f7f7ff;
-  --text-section: #716d6d;
-  --footer-bg: #eee;
-  --logo-box-shadow: rgba(5, 178, 89, 0.489) -5px 5px, rgba(5, 178, 89, 0.3) -10px 10px, rgba(5, 178, 89, 0.2) -15px 15px, rgba(5, 178, 89, 0.1) -20px 20px, rgba(5, 178, 89, 0.05) -25px 25px;
-  --video-block-bg: #eee;
-  --map-bg: #f7f7f7 ;
+  --login-btn-bg: #1e1e1f7d;
 }
 
 #header {
@@ -1410,7 +1411,6 @@ html {
 .main-header__inner {
   display: flex;
   align-items: center;
-  padding-bottom: 5px;
 }
 @media (max-width: 767.98px) {
   .main-header__inner {
@@ -1459,12 +1459,12 @@ html {
 }
 @media (max-width: 1199.98px) {
   .nav-bar__list {
-    margin-left: 100px;
+    margin-left: 80px;
   }
 }
 @media (max-width: 991.98px) {
   .nav-bar__list {
-    margin-left: 110px;
+    margin-left: 20px;
   }
 }
 @media (max-width: 767.98px) {
@@ -1500,11 +1500,16 @@ html {
   font-weight: 600;
   font-size: 1.6rem;
 }
+@media (max-width: 1199.98px) {
+  .nav-bar__link {
+    padding: 14px;
+  }
+}
 @media (max-width: 991.98px) {
   .nav-bar__link {
     font-weight: 600;
     font-size: 1.2rem;
-    padding: 14px;
+    padding: 10px;
   }
 }
 @media (max-width: 767.98px) {
@@ -2696,6 +2701,11 @@ html {
   background-color: #ff1a1a;
 }
 
+.album-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .album-edit-box {
   width: 200px;
   background-color: #fff;
@@ -2735,6 +2745,37 @@ html {
 
 .delete-btn:hover {
   background-color: #ff1a1a;
+}
+
+.admin-albums__title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.admin-albums img, .admin-services img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.admin-albums h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.admin-albums button, .admin-services button {
+  padding: 10px;
+  width: 100px;
+  height: 30px;
+  background: rgba(25, 25, 25, 0.8784313725);
+  color: #fff;
+  cursor: pointer;
+}
+
+.admin-services {
+  margin-top: 50px;
 }
 
 /* From Uiverse.io by Pradeepsaranbishnoi */
@@ -2813,6 +2854,30 @@ html {
     box-shadow: 30px 0 0 #97bf0d;
     margin-top: 0;
   }
+}
+.login-btn {
+  height: 40px;
+  min-width: 80px;
+  background: var(--login-btn-bg);
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  box-shadow: 0px 4px 8px rgba(64, 64, 64, 0.7);
+  cursor: pointer;
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 30px 0 auto;
+}
+
+.view-text {
+  color: var(--text-color);
+  margin-left: 6px;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map */
