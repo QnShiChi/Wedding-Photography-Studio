@@ -103,34 +103,28 @@ document.addEventListener("DOMContentLoaded", () => {
   updateSlideWidth();
 });
 
-// Play video
-document.addEventListener('DOMContentLoaded', function () {
+// Xử lí hiển thị modal-video
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('videoModal');
+  const modalVideo = document.getElementById('modal-video');
   const videoBlocks = document.querySelectorAll('.video-block');
-  const modal = document.querySelector('.video-modal');
-  const modalVideo = document.querySelector('#modal-video');
-  const closeBtn = document.querySelector('.close-modal');
 
   videoBlocks.forEach(block => {
-      block.addEventListener('click', function () {
-          const videoItem = block.querySelector("video");
-          const videoSrc = videoItem.src;
-          modalVideo.src = videoSrc;
-          modal.style.display = 'flex';
-          
-          modalVideo.addEventListener('loadeddata', function () {
-              modalVideo.play();
-          }, { once: true });  
-      });
+    block.addEventListener('click', function() {
+      const videoSrc = this.getAttribute('data-video');
+      modalVideo.src = videoSrc;
+      modal.style.display = 'flex'; 
+    });
   });
 
-  window.addEventListener('click', function (e) {
-      if (e.target === modal || e.target === closeBtn) {
-          modal.style.display = 'none';
-          modalVideo.pause();  
-          modalVideo.src = '';  
-      }
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+      modalVideo.src = ''; 
+    }
   });
 });
+
 
 // Fix navbar last item
 const navbarItems = document.querySelectorAll(".nav-bar__item");
@@ -248,6 +242,51 @@ loadHtmlToIndex('play-music-btn.html').then(() => {
     }
   });
 });
+
+
+// Đóng mở nav-bar
+const menuButton = document.querySelector('.nav-bar__menu.js-toggle');
+const backButton = document.querySelector('.nav-bar__back-btn.js-toggle');
+const navbar = document.getElementById('navbar');
+const overlay = document.querySelector('.nav-bar__overlay.js-toggle');
+
+const openNavbar = () => {
+  navbar.classList.add('show');
+  navbar.classList.remove('hide');
+  overlay.classList.add('show');
+};
+
+const closeNavbar = () => {
+  navbar.classList.remove('show');
+  navbar.classList.add('hide');
+  overlay.classList.remove('show');
+};
+
+menuButton.addEventListener('click', openNavbar);
+
+backButton.addEventListener('click', closeNavbar);
+
+overlay.addEventListener('click', closeNavbar);
+
+// Xử lí dark-mode
+const themeSwitch = document.querySelector('.switch .slider');
+const htmlElement = document.documentElement;
+
+const toggleDarkMode = () => {
+  const isDarkMode = htmlElement.classList.toggle('dark');
+  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); 
+};
+
+themeSwitch.addEventListener('click', toggleDarkMode);
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('theme') === 'dark') {
+    htmlElement.classList.add('dark');
+  }
+});
+
+
+
 
 
 

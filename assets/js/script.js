@@ -23,49 +23,21 @@ function load(selector, path) {
 }
 
 // Dark mode
-window.addEventListener("template-loaded", () => {
-  const switchBtn = document.querySelector("#switch-theme-btn");
-  if (switchBtn) {
-    switchBtn.onclick = function () {
-      const isDark = localStorage.dark === "true";
-      document.querySelector("html").classList.toggle("dark", !isDark);
-      localStorage.setItem("dark", !isDark);
-    };
-    const isDark = localStorage.dark === "true";
-  }
-});
+// window.addEventListener("template-loaded", () => {
+//   const switchBtn = document.querySelector("#switch-theme-btn");
+//   if (switchBtn) {
+//     switchBtn.onclick = function () {
+//       const isDark = localStorage.dark === "true";
+//       document.querySelector("html").classList.toggle("dark", !isDark);
+//       localStorage.setItem("dark", !isDark);
+//     };
+//     const isDark = localStorage.dark === "true";
+//   }
+// });
 
-const isDark = localStorage.dark === "true";
-document.querySelector("html").classList.toggle("dark", isDark);
+// const isDark = localStorage.dark === "true";
+// document.querySelector("html").classList.toggle("dark", isDark);
 
-/**
- * JS toggle
- *
- * Cách dùng:
- * <button class="js-toggle" toggle-target="#box">Click</button>
- * <div id="box">Content show/hide</div>
- */
-window.addEventListener("template-loaded", initJsToggle);
-
-function initJsToggle() {
-    $$(".js-toggle").forEach((button) => {
-        const target = button.getAttribute("toggle-target");
-        if (!target) {
-            document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
-        }
-        button.onclick = () => {
-            if (!$(target)) {
-                return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
-            }
-            const isHidden = $(target).classList.contains("hide");
-
-            requestAnimationFrame(() => {
-                $(target).classList.toggle("hide", !isHidden);
-                $(target).classList.toggle("show", isHidden);
-            });
-        };
-    });
-}
 
 window.addEventListener("template-loaded", () => {
   const links = $$(".js-dropdown-list > li > a");
@@ -78,4 +50,3 @@ window.addEventListener("template-loaded", () => {
       };
   });
 });
-

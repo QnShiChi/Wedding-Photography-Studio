@@ -53,7 +53,7 @@
       load("#header", "./template/header.html");
     </script>
 
-    <main>
+    <main class="main">
       <div class="slideshow">
         <div class="slides">
           <img src="./assets/img/slideshow-2.jpg" alt="Slide 2" />
@@ -278,24 +278,28 @@
               </div>
               <!-- Video gallery -->
               <div class="video-gallery">
-                <div class="video-block">
-                    <video src="./assets/video/video-demo.mp4" controls></video>
+                <div class="video-block" data-video="https://www.youtube.com/embed/g1Mi-nJB7us?si=d3g5Ut4vhCkyT_z2">
+                  <img class="thumbnail-video" src="https://img.youtube.com/vi/g1Mi-nJB7us/hqdefault.jpg" alt="Thumbnail 1" />
+                  <img src="./assets/icons/ytb-btn.png" alt="" class="play-youtube-btn">
                 </div>
-                <div class="video-block">
-                    <video src="./assets/video/video-demo.mp4" controls></video>
+                <div class="video-block" data-video="https://www.youtube.com/embed/PZqjbD6WUx8?si=Av6RQX2ipa6pSF4b">
+                  <img class="thumbnail-video" src="https://img.youtube.com/vi/PZqjbD6WUx8/hqdefault.jpg" alt="Thumbnail 2" />
+                  <img src="./assets/icons/ytb-btn.png" alt="" class="play-youtube-btn">
                 </div>
-                <div class="video-block">
-                    <video src="./assets/video/video-demo.mp4" controls></video>
+                <div class="video-block" data-video="https://www.youtube.com/embed/g1Mi-nJB7us?si=vOKg7e_5ZUdXcaeF">
+                  <img class="thumbnail-video" src="https://img.youtube.com/vi/CRBtjYp8IAE/hqdefault.jpg" alt="Thumbnail 3" />
+                  <img src="./assets/icons/ytb-btn.png" alt="" class="play-youtube-btn">
                 </div>
-                <div class="video-block">
-                    <video src="./assets/video/video-demo.mp4" controls></video>
+                <div class="video-block" data-video="https://www.youtube.com/embed/-991xmNu9qk?si=Z2hCCeGX5_q7ibTL">
+                  <img class="thumbnail-video" src="https://img.youtube.com/vi/-991xmNu9qk/hqdefault.jpg" alt="Thumbnail 4" />
+                  <img src="./assets/icons/ytb-btn.png" alt="" class="play-youtube-btn">
                 </div>
               </div>
-        
-              <div class="video-modal">
+
+              <!-- Modal -->
+              <div class="video-modal" id="videoModal">
                 <div class="video-modal-content">
-                    <span class="close-modal">&times;</span>
-                    <video id="modal-video" controls></video>
+                  <iframe id="modal-video" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
